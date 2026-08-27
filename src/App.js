@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
+import { FilterSection } from './components/FilterSection';
+import { ProductList } from './components/ProductList';
+
 
 function App() {
+
+  const [filters, setFilters] = useState({
+    fuel: [],
+    budget: "",
+    car: "",
+    city: ""
+  })
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="used-car-page">
+
+      <div className='filter-section'>
+        <FilterSection filters={filters} setFilters={setFilters} />
+      </div>
+
+      <div className='products-list'>
+        <ProductList filters={filters} />
+      </div>
+
     </div>
   );
 }
