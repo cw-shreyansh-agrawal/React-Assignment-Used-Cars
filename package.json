@@ -2,7 +2,7 @@
   "name": "used-car",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://carwale.com",
+  "proxy": "https://localhost:7087",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",

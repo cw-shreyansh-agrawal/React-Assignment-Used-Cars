@@ -31,7 +31,7 @@ export const FilterSection = ({ filters, setFilters }) => {
     const [makes, setMakes] = useState([]);
 
     useEffect(() => {
-        fetch("/api/v2/makes?type=new")
+        fetch("/api/makes")
             .then(response => response.json())
             .then(data => setMakes(data));
     }, []);
@@ -117,8 +117,8 @@ export const FilterSection = ({ filters, setFilters }) => {
                     <option value="">All Cities</option>
 
                     {cities.map(city => (
-                        <option key={city.CityId} value={city.CityId}>
-                            {city.CityName}
+                        <option key={city.cityId} value={city.cityId}>
+                            {city.cityName}
                         </option>
                     ))}
                 </select>

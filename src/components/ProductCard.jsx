@@ -53,7 +53,7 @@ export const ProductCard = ({product}) => {
                 <p>
                     {product.km} km | {product.fuel} | {product.cityName}
                 </p>
-                <h2>₹ {product.price}</h2>
+                <h2>₹ {product.formattedPrice}</h2>
                 <button>Get Seller Details</button>
             </div>
             
